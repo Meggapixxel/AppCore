@@ -23,7 +23,7 @@ final class TableViewPresenterExample3: TableViewControllerPresenterImpl<TableVi
     }
     
     func endLoadMore() {
-        tableViewData = TableViewSingleSectionLoadMoreDataImpl(
+        tableViewData = TableViewLoadMoreDataImpl(
             sectionModels: [
                 TableViewSectionModelImpl(
                     cellModels: 20.makeArray { index in

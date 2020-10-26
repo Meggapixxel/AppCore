@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewSingleSectionLoadMoreDataImpl: NSObject, TableViewLoadMoreData {
+class TableViewLoadMoreDataImpl: NSObject, TableViewLoadMoreData {
 
     let header: UIView?
     let footer: UIView?
@@ -50,7 +50,7 @@ class TableViewSingleSectionLoadMoreDataImpl: NSObject, TableViewLoadMoreData {
         let insertSection = self.sectionModels.count
         self.sectionModels.append(sectionModel)
         registerSubviews(for: tableView)
-        tableView.insertSections(IndexSet(integer: insertSection), with: .bottom)
+        tableView.insertSections(IndexSet(integer: insertSection), with: .left)
         state = .normal(.yes)
     }
 

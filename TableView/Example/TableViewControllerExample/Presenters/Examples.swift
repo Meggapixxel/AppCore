@@ -28,7 +28,7 @@ final class TableViewPresenterExamples: TableViewControllerPresenterImpl<TableVi
             cellModels: [
                 TableViewCellPresenterExample.list(text: "SingleSection") { [weak self] in self?.singleSelection() },
                 TableViewCellPresenterExample.list(text: "MultipleSection") { [weak self] in self?.multipleSection() },
-                TableViewCellPresenterExample.list(text: "SingleSection+LoadMore") { [weak self] in self?.updatableSingleSection() },
+                TableViewCellPresenterExample.list(text: "LoadMore") { [weak self] in self?.updatableSingleSection() },
             ]
         )
     }

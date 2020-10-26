@@ -29,7 +29,7 @@
 		737A2BD82544D40C00A78129 /* ViewControllerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A2BD72544D40C00A78129 /* ViewControllerImpl.swift */; };
 		737A2BDC2544D4B000A78129 /* ViewControllerPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737A2BDB2544D4B000A78129 /* ViewControllerPresenterImpl.swift */; };
 		739065FE254616A100D3D168 /* TableViewLoadMoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739065FD254616A100D3D168 /* TableViewLoadMoreData.swift */; };
-		739066062546187A00D3D168 /* TableViewSingleSectionLoadMoreDataImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739066052546187A00D3D168 /* TableViewSingleSectionLoadMoreDataImpl.swift */; };
+		739066062546187A00D3D168 /* TableViewLoadMoreDataImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739066052546187A00D3D168 /* TableViewLoadMoreDataImpl.swift */; };
 		7390660E254619E800D3D168 /* HeaderFooterViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7390660D254619E800D3D168 /* HeaderFooterViewExample.swift */; };
 		7390661125461A1000D3D168 /* HeaderFooterViewExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7390661025461A1000D3D168 /* HeaderFooterViewExampleModel.swift */; };
 		7390661625461B1600D3D168 /* Example2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7390661525461B1600D3D168 /* Example2.swift */; };
@@ -74,7 +74,7 @@
 		737A2BD72544D40C00A78129 /* ViewControllerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerImpl.swift; sourceTree = "<group>"; };
 		737A2BDB2544D4B000A78129 /* ViewControllerPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenterImpl.swift; sourceTree = "<group>"; };
 		739065FD254616A100D3D168 /* TableViewLoadMoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewLoadMoreData.swift; sourceTree = "<group>"; };
-		739066052546187A00D3D168 /* TableViewSingleSectionLoadMoreDataImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSingleSectionLoadMoreDataImpl.swift; sourceTree = "<group>"; };
+		739066052546187A00D3D168 /* TableViewLoadMoreDataImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewLoadMoreDataImpl.swift; sourceTree = "<group>"; };
 		7390660D254619E800D3D168 /* HeaderFooterViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFooterViewExample.swift; sourceTree = "<group>"; };
 		7390661025461A1000D3D168 /* HeaderFooterViewExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFooterViewExampleModel.swift; sourceTree = "<group>"; };
 		7390661525461B1600D3D168 /* Example2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				73B6A6612543501E0003D0C0 /* TableViewLoadingData.swift */,
 				737A2BC82544D1C600A78129 /* TableViewPlaceholderData.swift */,
 				737A2BC22544C76600A78129 /* TableViewDataImpl.swift */,
-				739066052546187A00D3D168 /* TableViewSingleSectionLoadMoreDataImpl.swift */,
+				739066052546187A00D3D168 /* TableViewLoadMoreDataImpl.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -435,7 +435,7 @@
 				73077F3425477F3700A6EEC7 /* AppCoordinator.swift in Sources */,
 				73B6A65725434B3E0003D0C0 /* TableViewCell+UITableView.swift in Sources */,
 				733255092544432800ABD1B6 /* TableViewController.swift in Sources */,
-				739066062546187A00D3D168 /* TableViewSingleSectionLoadMoreDataImpl.swift in Sources */,
+				739066062546187A00D3D168 /* TableViewLoadMoreDataImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
