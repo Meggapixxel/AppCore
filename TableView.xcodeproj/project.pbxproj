@@ -136,6 +136,17 @@
 			path = TableViewControllerExample;
 			sourceTree = "<group>";
 		};
+		73077F3E2547839E00A6EEC7 /* ETC */ = {
+			isa = PBXGroup;
+			children = (
+				73B6A6222543477A0003D0C0 /* Assets.xcassets */,
+				73B6A6242543477A0003D0C0 /* LaunchScreen.storyboard */,
+				73B6A6272543477A0003D0C0 /* Info.plist */,
+				7371C8972544588400CA2D00 /* Utils.swift */,
+			);
+			path = ETC;
+			sourceTree = "<group>";
+		};
 		733254EA2544133600ABD1B6 /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,14 +179,11 @@
 		7371C87E2544543A00CA2D00 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				73077F3E2547839E00A6EEC7 /* ETC */,
 				73B6A619254347770003D0C0 /* AppDelegate.swift */,
 				73077F3325477F3700A6EEC7 /* AppCoordinator.swift */,
 				73077F3A2547816500A6EEC7 /* AppViewControllers.swift */,
 				73077F382547801A00A6EEC7 /* TableViewControllerExample */,
-				73B6A6222543477A0003D0C0 /* Assets.xcassets */,
-				73B6A6242543477A0003D0C0 /* LaunchScreen.storyboard */,
-				73B6A6272543477A0003D0C0 /* Info.plist */,
-				7371C8972544588400CA2D00 /* Utils.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -576,7 +584,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P48UR2NBG2;
-				INFOPLIST_FILE = TableView/Example/Info.plist;
+				INFOPLIST_FILE = TableView/Example/ETC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,7 +603,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P48UR2NBG2;
-				INFOPLIST_FILE = TableView/Example/Info.plist;
+				INFOPLIST_FILE = TableView/Example/ETC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
