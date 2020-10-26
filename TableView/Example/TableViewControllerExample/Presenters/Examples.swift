@@ -9,26 +9,26 @@ import Foundation
 
 final class TableViewPresenterExamples: TableViewControllerPresenterImpl<TableViewControllerExample> {
     
-    private let singleSelection: () -> Void
-    private let multipleSection: () -> Void
-    private let updatableSingleSection: () -> Void
+    private let singleSelectionTableViewData: () -> Void
+    private let multipleSectionsTableViewData: () -> Void
+    private let loadModeTableViewData: () -> Void
     
     init(
-        singleSelection: @escaping () -> Void,
-        multipleSection: @escaping () -> Void,
-        updatableSingleSection: @escaping () -> Void
+        singleSelectionTableViewData: @escaping () -> Void,
+        multipleSectionsTableViewData: @escaping () -> Void,
+        loadModeTableViewData: @escaping () -> Void
     ) {
-        self.singleSelection = singleSelection
-        self.multipleSection = multipleSection
-        self.updatableSingleSection = updatableSingleSection
+        self.singleSelectionTableViewData = singleSelectionTableViewData
+        self.multipleSectionsTableViewData = multipleSectionsTableViewData
+        self.loadModeTableViewData = loadModeTableViewData
     }
     
     override func viewDidLoad() {
         tableViewData = TableViewDataImpl(
             cellModels: [
-                TableViewCellPresenterExample.list(text: "SingleSection") { [weak self] in self?.singleSelection() },
-                TableViewCellPresenterExample.list(text: "MultipleSection") { [weak self] in self?.multipleSection() },
-                TableViewCellPresenterExample.list(text: "LoadMore") { [weak self] in self?.updatableSingleSection() },
+                TableViewCellPresenterExample.list(text: "SingleSection") { [weak self] in self?.singleSelectionTableViewData() },
+                TableViewCellPresenterExample.list(text: "MultipleSection") { [weak self] in self?.multipleSectionsTableViewData() },
+                TableViewCellPresenterExample.list(text: "LoadMore") { [weak self] in self?.loadModeTableViewData() },
             ]
         )
     }

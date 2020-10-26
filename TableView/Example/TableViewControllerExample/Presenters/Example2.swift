@@ -24,10 +24,10 @@ final class TableViewPresenterExample2: TableViewControllerPresenterImpl<TableVi
     
     func endLoadMore() {
         tableViewData = TableViewDataImpl(
-            sectionModels: (1...5).randomElement()!.makeArray {
+            sectionModels: (1...5).randomElement()!.makeArray { index in
                 TableViewSectionModelImpl(
-                    headerModel: HeaderFooterViewExampleModel(text: "header"),
-                    footerModel: HeaderFooterViewExampleModel(text: "footer"),
+                    headerModel: HeaderFooterViewExampleModel(text: "header \(index)"),
+                    footerModel: HeaderFooterViewExampleModel(text: "footer \(index)"),
                     cellModels: (1...20).randomElement()!.makeArray {
                         TableViewCellPresenterExample.details()
                     }

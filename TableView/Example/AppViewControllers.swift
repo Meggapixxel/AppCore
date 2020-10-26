@@ -10,8 +10,8 @@ import UIKit
 protocol AppViewControllers {
     
     func navigationController() -> UINavigationController
-    
-    func examples(singleSelection: @escaping () -> Void, multipleSection: @escaping () -> Void, updatableSingleSection: @escaping () -> Void) -> UIViewController
+
+    func examples(singleSelectionTableViewData: @escaping () -> Void, multipleSectionsTableViewData: @escaping () -> Void, loadModeTableViewData: @escaping () -> Void) -> UIViewController
     
     func singleSection() -> UIViewController
     
@@ -27,11 +27,11 @@ final class AppViewControllersImpl: AppViewControllers {
         UINavigationController()
     }
     
-    func examples(singleSelection: @escaping () -> Void, multipleSection: @escaping () -> Void, updatableSingleSection: @escaping () -> Void) -> UIViewController {
+    func examples(singleSelectionTableViewData: @escaping () -> Void, multipleSectionsTableViewData: @escaping () -> Void, loadModeTableViewData: @escaping () -> Void) -> UIViewController {
         let presenter = TableViewPresenterExamples(
-            singleSelection: singleSelection,
-            multipleSection: multipleSection,
-            updatableSingleSection: updatableSingleSection
+            singleSelectionTableViewData: singleSelectionTableViewData,
+            multipleSectionsTableViewData: multipleSectionsTableViewData,
+            loadModeTableViewData: loadModeTableViewData
         )
         let viewController = TableViewControllerExample(presenter: presenter)
         presenter.set(view: viewController)

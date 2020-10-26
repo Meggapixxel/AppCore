@@ -26,9 +26,9 @@ extension AppCoordinator: Coodinator {
     
     func start() {
         let viewController = viewControllersFactory.examples(
-            singleSelection: { [weak self] in self?.pushSingleSelection() },
-            multipleSection: { [weak self] in self?.pushMultipleSection() },
-            updatableSingleSection: { [weak self] in self?.pushUpdatableSingleSection() }
+            singleSelectionTableViewData: { [weak self] in self?.pushSingleSelection() },
+            multipleSectionsTableViewData: { [weak self] in self?.pushMultipleSection() },
+            loadModeTableViewData: { [weak self] in self?.pushUpdatableSingleSection() }
         )
         navigationController.setViewControllers([viewController], animated: false)
         
