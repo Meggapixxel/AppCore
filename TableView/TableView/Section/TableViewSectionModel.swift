@@ -8,13 +8,27 @@
 import Foundation
 
 protocol TableViewSectionModel {
-    var header: TableViewHeaderFooterViewModel? { get }
-    var footer: TableViewHeaderFooterViewModel? { get }
+    
+    var headerModel: TableViewHeaderFooterViewModel? { get }
+    var footerModel: TableViewHeaderFooterViewModel? { get }
     var cellModels: [TableViewCellModel] { get }
+    
 }
 
-struct TableViewSectionModelImpl: TableViewSectionModel {
-    let header: TableViewHeaderFooterViewModel?
-    let footer: TableViewHeaderFooterViewModel?
+final class TableViewSectionModelImpl: TableViewSectionModel {
+    
+    let headerModel: TableViewHeaderFooterViewModel?
+    let footerModel: TableViewHeaderFooterViewModel?
     let cellModels: [TableViewCellModel]
+    
+    init(
+        headerModel: TableViewHeaderFooterViewModel? = nil,
+        footerModel: TableViewHeaderFooterViewModel? = nil,
+        cellModels: [TableViewCellModel]
+    ) {
+        self.headerModel = headerModel
+        self.footerModel = footerModel
+        self.cellModels = cellModels
+    }
+    
 }

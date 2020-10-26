@@ -63,10 +63,10 @@ extension TableViewCellPresenterExample {
         )
     }
     
-    static func details() -> TableViewCellPresenterExample {
+    static func details(text: String = .random(maxLength: 200)) -> TableViewCellPresenterExample {
         TableViewCellPresenterExample(
             color: .random(),
-            text: .random(maxLength: 200),
+            text: text,
             textAlignment: .left,
             selection: .none
         )

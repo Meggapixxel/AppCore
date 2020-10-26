@@ -19,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let presenter = TableViewPresenterExamples(
             singleSelection: { [weak self] in self?.pushSingleSelection() },
             multipleSection: { [weak self] in self?.pushMultipleSection() },
-            updatableSingleSection: { [weak self] in self?.pushUpdatableSingleSection() },
-            updatableMultipleSection: { [weak self] in self?.pushUpdatableMultipleSection() }
+            updatableSingleSection: { [weak self] in self?.pushUpdatableSingleSection() }
         )
         let viewController = TableViewControllerExample(presenter: presenter)
         presenter.set(view: viewController)
@@ -31,28 +30,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func pushSingleSelection() {
-        let presenter = TableViewPresenterSingleSectionExample()
+        let presenter = TableViewPresenterExample1()
         let viewController = TableViewControllerExample(presenter: presenter)
         presenter.set(view: viewController)
         (window?.rootViewController as? UINavigationController)?.pushViewController(viewController, animated: true)
     }
     
     func pushMultipleSection() {
-        let presenter = TableViewPresenterMultipleSectionExample()
+        let presenter = TableViewPresenterExample2()
         let viewController = TableViewControllerExample(presenter: presenter)
         presenter.set(view: viewController)
         (window?.rootViewController as? UINavigationController)?.pushViewController(viewController, animated: true)
     }
     
     func pushUpdatableSingleSection() {
-        let presenter = TableViewPresenterUpdatableSingleSectionExample()
-        let viewController = TableViewControllerExample(presenter: presenter)
-        presenter.set(view: viewController)
-        (window?.rootViewController as? UINavigationController)?.pushViewController(viewController, animated: true)
-    }
-    
-    func pushUpdatableMultipleSection() {
-        let presenter = TableViewPresenterUpdatableMultipleSectionExample()
+        let presenter = TableViewPresenterExample3()
         let viewController = TableViewControllerExample(presenter: presenter)
         presenter.set(view: viewController)
         (window?.rootViewController as? UINavigationController)?.pushViewController(viewController, animated: true)

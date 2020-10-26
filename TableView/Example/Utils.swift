@@ -44,4 +44,8 @@ extension Int {
         (0..<self).compactMap { _ in closure() }
     }
     
+    func makeArray<T>(_ closure: (Int) -> T) -> [T] {
+        (0..<self).enumerated().compactMap { (offset, element) in closure(offset) }
+    }
+    
 }

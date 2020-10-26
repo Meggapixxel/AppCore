@@ -1,5 +1,5 @@
 //
-//  SingleSection.swift
+//  Example1.swift
 //  TableView
 //
 //  Created by Vadym Zhydenko on 24.10.2020.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TableViewPresenterSingleSectionExample: TableViewControllerPresenterImpl<TableViewControllerExample> {
+final class TableViewPresenterExample1: TableViewControllerPresenterImpl<TableViewControllerExample> {
     
     override func viewDidLoad() {
         fetchData()
@@ -23,8 +23,8 @@ final class TableViewPresenterSingleSectionExample: TableViewControllerPresenter
     }
     
     func endLoadMore() {
-        tableViewData = TableViewSingleSectionDataImpl(
-            cellModels: (1...20).randomElement()!.makeArray {
+        tableViewData = TableViewDataImpl(
+            cellModels: (20...50).randomElement()!.makeArray {
                 TableViewCellPresenterExample.details()
             }
         )

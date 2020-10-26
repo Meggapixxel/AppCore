@@ -1,5 +1,5 @@
 //
-//  TableViewData.swift
+//  TableViewDataImpl.swift
 //  TableView
 //
 //  Created by Vadym Zhydenko on 23.10.2020.
@@ -7,52 +7,42 @@
 
 import UIKit
 
-protocol TableViewData: UITableViewDataSource, UITableViewDelegate {
+class TableViewDataImpl: NSObject, TableViewData {
     
-    var allowsSelection: Bool { get }
-    var separatorStyle: UITableViewCell.SeparatorStyle { get }
-    
-    var header: UIView? { get }
-    var footer: UIView? { get }
-    var sectionModels: [TableViewSectionModel] { get }
-    
-    func config(for tableView: UITableView)
-    
-}
+    let header: UIView?
+    let footer: UIView?
+    let sectionModels: [TableViewSectionModel]
 
-extension TableViewData {
-    
-    func prepare(for tableView: UITableView) {
-        config(for: tableView)
-        registerSubviews(for: tableView)
-        tableView.allowsSelection = allowsSelection
-        tableView.separatorStyle = separatorStyle
-        tableView.separatorInset = .init(top: 0, left: 16, bottom: 0, right: 16)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.reloadData()
-    }
-    
-    func registerSubviews(for tableView: UITableView) {
-        tableView.tableHeaderView = header
-        tableView.tableFooterView = footer
-        sectionModels.compactMap { $0.headerModel }.forEach { tableView.register(headerFooterViewModel: $0) }
-        sectionModels.compactMap { $0.footerModel }.forEach { tableView.register(headerFooterViewModel: $0) }
-        sectionModels.compactMap { $0.cellModels }.forEach { $0.forEach { tableView.register(cellModel: $0) } }
-    }
-    
-}
-
-extension TableViewData {
-    
-    var allowsSelection: Bool { true }
-    var separatorStyle: UITableViewCell.SeparatorStyle { .singleLine }
-    
-    var header: UIView? { nil }
-    var footer: UIView? { nil }
-    
-    func config(for tableView: UITableView) {
+    init(
+        header: UIView? = nil,
+        footer: UIView? = nil,
+        sectionModels: [TableViewSectionModel]
+    ) {
+        self.header = header
+        self.footer = footer
+        self.sectionModels = sectionModels
         
+        super.init()
+    }
+    
+    convenience init(
+        header: UIView? = nil,
+        footer: UIView? = .init(),
+        sectionHeaderModel: TableViewHeaderFooterViewModel? = nil,
+        sectionFooterModel: TableViewHeaderFooterViewModel? = nil,
+        cellModels: [TableViewCellModel]
+    ) {
+        self.init(
+            header: header,
+            footer: footer,
+            sectionModels: [
+                TableViewSectionModelImpl(
+                    headerModel: sectionHeaderModel,
+                    footerModel: sectionFooterModel,
+                    cellModels: cellModels
+                )
+            ]
+        )
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -96,4 +86,3 @@ extension TableViewData {
     }
     
 }
- 

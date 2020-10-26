@@ -1,5 +1,5 @@
 //
-//  UpdatableSingleSection.swift
+//  Example3.swift
 //  TableView
 //
 //  Created by Vadym Zhydenko on 24.10.2020.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TableViewPresenterUpdatableSingleSectionExample: TableViewControllerPresenterImpl<TableViewControllerExample> {
+final class TableViewPresenterExample3: TableViewControllerPresenterImpl<TableViewControllerExample> {
     
     override func viewDidLoad() {
         fetchData()
@@ -23,19 +23,22 @@ final class TableViewPresenterUpdatableSingleSectionExample: TableViewController
     }
     
     func endLoadMore() {
-        tableViewData = TableViewSingleSectionDataImpl(
-            cellModels: 20.makeArray {
-                TableViewCellPresenterExample.details()
-            },
+        tableViewData = TableViewSingleSectionLoadMoreDataImpl(
+            sectionModels: [
+                TableViewSectionModelImpl(
+                    cellModels: 20.makeArray { index in
+                        TableViewCellPresenterExample.details(text: String(index))
+                    }
+                )
+            ],
             onLoadMore: { (tableViewData, completion) in
+                let cellsCount = tableViewData.sectionModels.reduce(into: 0, { $0 += $1.cellModels.count })
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     completion(
                         [
                             TableViewSectionModelImpl(
-                                header: nil,
-                                footer: nil,
-                                cellModels: (1...20).randomElement()!.makeArray {
-                                    TableViewCellPresenterExample.details()
+                                cellModels: (10...20).randomElement()!.makeArray { index in
+                                    TableViewCellPresenterExample.details(text: String(cellsCount + index))
                                 }
                             )
                         ]

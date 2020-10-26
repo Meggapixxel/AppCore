@@ -1,13 +1,13 @@
 //
-//  MultipleSection.swift
+//  Example2.swift
 //  TableView
 //
-//  Created by Vadym Zhydenko on 24.10.2020.
+//  Created by Vadym Zhydenko on 25.10.2020.
 //
 
 import Foundation
 
-final class TableViewPresenterMultipleSectionExample: TableViewControllerPresenterImpl<TableViewControllerExample> {
+final class TableViewPresenterExample2: TableViewControllerPresenterImpl<TableViewControllerExample> {
     
     override func viewDidLoad() {
         fetchData()
@@ -23,11 +23,11 @@ final class TableViewPresenterMultipleSectionExample: TableViewControllerPresent
     }
     
     func endLoadMore() {
-        tableViewData = TableViewMultipleSectionDataImpl(
+        tableViewData = TableViewDataImpl(
             sectionModels: (1...5).randomElement()!.makeArray {
                 TableViewSectionModelImpl(
-                    header: nil,
-                    footer: nil,
+                    headerModel: HeaderFooterViewExampleModel(text: "header"),
+                    footerModel: HeaderFooterViewExampleModel(text: "footer"),
                     cellModels: (1...20).randomElement()!.makeArray {
                         TableViewCellPresenterExample.details()
                     }
