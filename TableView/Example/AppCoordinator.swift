@@ -14,7 +14,7 @@ final class AppCoordinator {
     
     private let viewControllersFactory: AppViewControllers
     
-    init(window: UIWindow = UIWindow(frame: UIScreen.main.bounds), viewControllersFactory: AppViewControllers) {
+    init(window: UIWindow, viewControllersFactory: AppViewControllers) {
         self.window = window
         self.navigationController = viewControllersFactory.navigationController()
         self.viewControllersFactory = viewControllersFactory
@@ -22,7 +22,7 @@ final class AppCoordinator {
     
 }
 
-extension AppCoordinator: Coodinator {
+extension AppCoordinator: Coordinator {
     
     func start() {
         let viewController = viewControllersFactory.examples(

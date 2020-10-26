@@ -1,5 +1,5 @@
 //
-//  Coodinator.swift
+//  Coordinator.swift
 //  TableView
 //
 //  Created by Vadym Zhydenko on 27.10.2020.
@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol Coodinator {
+protocol Coordinator {
     func start()
 }
