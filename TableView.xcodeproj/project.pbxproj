@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73077F3025477F2900A6EEC7 /* Coodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73077F2F25477F2900A6EEC7 /* Coodinator.swift */; };
+		73077F3425477F3700A6EEC7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73077F3325477F3700A6EEC7 /* AppCoordinator.swift */; };
+		73077F3B2547816500A6EEC7 /* AppViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73077F3A2547816500A6EEC7 /* AppViewControllers.swift */; };
 		733254FF2544216100ABD1B6 /* UIView+loadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733254FE2544216100ABD1B6 /* UIView+loadingFooterView.swift */; };
 		73325505254432A300ABD1B6 /* TableViewControllerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73325504254432A300ABD1B6 /* TableViewControllerImpl.swift */; };
 		733255092544432800ABD1B6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733255082544432800ABD1B6 /* TableViewController.swift */; };
@@ -49,6 +52,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73077F2F25477F2900A6EEC7 /* Coodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coodinator.swift; sourceTree = "<group>"; };
+		73077F3325477F3700A6EEC7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		73077F3A2547816500A6EEC7 /* AppViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewControllers.swift; sourceTree = "<group>"; };
 		733254FE2544216100ABD1B6 /* UIView+loadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+loadingFooterView.swift"; sourceTree = "<group>"; };
 		73325504254432A300ABD1B6 /* TableViewControllerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerImpl.swift; sourceTree = "<group>"; };
 		733255082544432800ABD1B6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73077F2E25477F1F00A6EEC7 /* Coodinator */ = {
+			isa = PBXGroup;
+			children = (
+				73077F2F25477F2900A6EEC7 /* Coodinator.swift */,
+			);
+			path = Coodinator;
+			sourceTree = "<group>";
+		};
+		73077F372547800700A6EEC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7371C890254454D900CA2D00 /* Cell */,
+				739066092546199800D3D168 /* HeaderFooterView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73077F382547801A00A6EEC7 /* TableViewControllerExample */ = {
+			isa = PBXGroup;
+			children = (
+				73077F372547800700A6EEC7 /* Views */,
+				7371C87F2544545D00CA2D00 /* Presenters */,
+				7371C87A2544503A00CA2D00 /* TableViewControllerExample.swift */,
+			);
+			path = TableViewControllerExample;
+			sourceTree = "<group>";
+		};
 		733254EA2544133600ABD1B6 /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,14 +168,13 @@
 		7371C87E2544543A00CA2D00 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				73B6A619254347770003D0C0 /* AppDelegate.swift */,
+				73077F3325477F3700A6EEC7 /* AppCoordinator.swift */,
+				73077F3A2547816500A6EEC7 /* AppViewControllers.swift */,
+				73077F382547801A00A6EEC7 /* TableViewControllerExample */,
 				73B6A6222543477A0003D0C0 /* Assets.xcassets */,
 				73B6A6242543477A0003D0C0 /* LaunchScreen.storyboard */,
 				73B6A6272543477A0003D0C0 /* Info.plist */,
-				73B6A619254347770003D0C0 /* AppDelegate.swift */,
-				7371C87A2544503A00CA2D00 /* TableViewControllerExample.swift */,
-				739066092546199800D3D168 /* HeaderFooterView */,
-				7371C890254454D900CA2D00 /* Cell */,
-				7371C87F2544545D00CA2D00 /* Presenters */,
 				7371C8972544588400CA2D00 /* Utils.swift */,
 			);
 			path = Example;
@@ -225,6 +257,7 @@
 		73B6A618254347770003D0C0 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				73077F2E25477F1F00A6EEC7 /* Coodinator */,
 				73B6A63A25434A4D0003D0C0 /* TableView */,
 				733255072544432100ABD1B6 /* Controller */,
 				7371C87E2544543A00CA2D00 /* Example */,
@@ -380,6 +413,7 @@
 				73B6A64425434A900003D0C0 /* TableViewHeaderFooterView.swift in Sources */,
 				73B6A62F254347990003D0C0 /* TableViewHeaderFooterView+UITableView.swift in Sources */,
 				73B6A61A254347770003D0C0 /* AppDelegate.swift in Sources */,
+				73077F3025477F2900A6EEC7 /* Coodinator.swift in Sources */,
 				737A2BDC2544D4B000A78129 /* ViewControllerPresenterImpl.swift in Sources */,
 				737A2BCD2544D32C00A78129 /* ViewControllerPresenter.swift in Sources */,
 				737A2BD32544D37B00A78129 /* ViewController.swift in Sources */,
@@ -390,6 +424,7 @@
 				73B6A63D25434A650003D0C0 /* TableViewHeaderFooterViewClass.swift in Sources */,
 				73B6A633254347C50003D0C0 /* TableViewSectionModel.swift in Sources */,
 				73B6A64125434A790003D0C0 /* TableViewHeaderFooterViewModel.swift in Sources */,
+				73077F3B2547816500A6EEC7 /* AppViewControllers.swift in Sources */,
 				73B6A65E25434D160003D0C0 /* TableViewData.swift in Sources */,
 				737A2BC32544C76600A78129 /* TableViewDataImpl.swift in Sources */,
 				7390660E254619E800D3D168 /* HeaderFooterViewExample.swift in Sources */,
@@ -397,6 +432,7 @@
 				737A2BD82544D40C00A78129 /* ViewControllerImpl.swift in Sources */,
 				733254FF2544216100ABD1B6 /* UIView+loadingFooterView.swift in Sources */,
 				7371C87B2544503A00CA2D00 /* TableViewControllerExample.swift in Sources */,
+				73077F3425477F3700A6EEC7 /* AppCoordinator.swift in Sources */,
 				73B6A65725434B3E0003D0C0 /* TableViewCell+UITableView.swift in Sources */,
 				733255092544432800ABD1B6 /* TableViewController.swift in Sources */,
 				739066062546187A00D3D168 /* TableViewSingleSectionLoadMoreDataImpl.swift in Sources */,
