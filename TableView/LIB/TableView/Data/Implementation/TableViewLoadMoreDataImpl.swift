@@ -29,7 +29,6 @@ class TableViewLoadMoreDataImpl: NSObject, TableViewLoadMoreData {
         super.init()
     }
 
-
     func beginLoadMore(_ tableView: UITableView) -> Bool {
         state = .loadingMore
         tableView.tableFooterView = UIView.loadingFooterView(width: tableView.bounds.size.width, height: 44)
@@ -49,7 +48,6 @@ class TableViewLoadMoreDataImpl: NSObject, TableViewLoadMoreData {
         guard let sectionModel = sectionModels?.first else { return state = .normal(.no) }
         let insertSection = self.sectionModels.count
         self.sectionModels.append(sectionModel)
-        registerSubviews(for: tableView)
         tableView.insertSections(IndexSet(integer: insertSection), with: .left)
         state = .normal(.yes)
     }

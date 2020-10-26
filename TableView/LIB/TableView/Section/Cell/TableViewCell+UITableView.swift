@@ -20,14 +20,15 @@ extension UITableView {
     }
     
     func dequeue(cellModel model: TableViewCellModel, for indexPath: IndexPath) -> TableViewCell {
-        guard let cell = dequeueReusableCell(withIdentifier: model.viewReuseIdentifier, for: indexPath) as? TableViewCell else {
+        if let cell = dequeueReusableCell(withIdentifier: model.viewReuseIdentifier) as? TableViewCell {
+            return cell
+        } else {
             register(cellModel: model)
             guard let cell = dequeueReusableCell(withIdentifier: model.viewReuseIdentifier, for: indexPath) as? TableViewCell else {
                 fatalError("Could not dequeue cell with identifier: \(model.viewReuseIdentifier)")
             }
             return cell
         }
-        return cell
     }
     
     func dequeueConfigured(cellModel model: TableViewCellModel, for indexPath: IndexPath) -> TableViewCell {

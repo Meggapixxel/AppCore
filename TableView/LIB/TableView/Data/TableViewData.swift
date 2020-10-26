@@ -24,21 +24,14 @@ extension TableViewData {
     
     func prepare(for tableView: UITableView) {
         config(for: tableView)
-        registerSubviews(for: tableView)
+        tableView.tableHeaderView = header
+        tableView.tableFooterView = footer
         tableView.allowsSelection = allowsSelection
         tableView.separatorStyle = separatorStyle
         tableView.separatorInset = .init(top: 0, left: 16, bottom: 0, right: 16)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
-    }
-    
-    func registerSubviews(for tableView: UITableView) {
-        tableView.tableHeaderView = header
-        tableView.tableFooterView = footer
-        sectionModels.compactMap { $0.headerModel }.forEach { tableView.register(headerFooterViewModel: $0) }
-        sectionModels.compactMap { $0.footerModel }.forEach { tableView.register(headerFooterViewModel: $0) }
-        sectionModels.compactMap { $0.cellModels }.forEach { $0.forEach { tableView.register(cellModel: $0) } }
     }
     
 }
