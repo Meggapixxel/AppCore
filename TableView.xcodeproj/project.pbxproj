@@ -147,6 +147,16 @@
 			path = ETC;
 			sourceTree = "<group>";
 		};
+		73077F432547844200A6EEC7 /* LIB */ = {
+			isa = PBXGroup;
+			children = (
+				73077F2E25477F1F00A6EEC7 /* Coodinator */,
+				73B6A63A25434A4D0003D0C0 /* TableView */,
+				733255072544432100ABD1B6 /* Controller */,
+			);
+			path = LIB;
+			sourceTree = "<group>";
+		};
 		733254EA2544133600ABD1B6 /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,9 +275,7 @@
 		73B6A618254347770003D0C0 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				73077F2E25477F1F00A6EEC7 /* Coodinator */,
-				73B6A63A25434A4D0003D0C0 /* TableView */,
-				733255072544432100ABD1B6 /* Controller */,
+				73077F432547844200A6EEC7 /* LIB */,
 				7371C87E2544543A00CA2D00 /* Example */,
 			);
 			path = TableView;
