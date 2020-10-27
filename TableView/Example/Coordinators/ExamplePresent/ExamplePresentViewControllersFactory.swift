@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ExamplePresentViewControllersFactory {
+protocol ExamplePresentViewControllersFactory: ViewControllersFactory {
     
     func tableViewControllerExample(presenter: TableViewControllerExamplePresenter) -> UIViewController
     

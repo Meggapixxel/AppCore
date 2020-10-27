@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppCore
 
 final class AppCoordinator: Coordinator {
     

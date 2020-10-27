@@ -7,19 +7,13 @@
 
 import UIKit
 
-protocol AppViewControllersFactory {
+protocol AppViewControllersFactory: ViewControllersFactory {
     
-    func navigationController() -> UINavigationController
-
     func examples(example1: @escaping () -> Void, example2: @escaping () -> Void, example3: @escaping () -> Void, navigateDismiss: @escaping (TableViewControllerExample) -> Void) -> UIViewController
     
 }
 
 final class AppViewControllersFactoryImpl: AppViewControllersFactory {
-    
-    func navigationController() -> UINavigationController {
-        UINavigationController()
-    }
     
     func examples(example1: @escaping () -> Void, example2: @escaping () -> Void, example3: @escaping () -> Void, navigateDismiss: @escaping (TableViewControllerExample) -> Void) -> UIViewController {
         let presenter = TableViewPresenterExamples(
