@@ -9,7 +9,7 @@ import UIKit
 
 final class AppCoordinator: Coordinator {
     
-    private let window: UIWindow
+    private weak var window: UIWindow!
     private let navigationController: UINavigationController
     
     private let viewControllersFactory: AppViewControllersFactory
@@ -28,9 +28,9 @@ final class AppCoordinator: Coordinator {
     
     func start() {
         let viewController = viewControllersFactory.examples(
-            singleSelectionTableViewData: { [weak self] in self?.pushSingleSelection() },
-            multipleSectionsTableViewData: { [weak self] in self?.pushMultipleSection() },
-            loadModeTableViewData: { [weak self] in self?.pushUpdatableSingleSection() },
+            example1: { [weak self] in self?.pushSingleSelection() },
+            example2: { [weak self] in self?.pushMultipleSection() },
+            example3: { [weak self] in self?.pushUpdatableSingleSection() },
             navigateDismiss: { viewController in
                 fatalError("\(viewController) can't be dismissed")
             }

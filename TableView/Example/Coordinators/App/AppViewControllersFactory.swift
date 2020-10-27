@@ -11,7 +11,7 @@ protocol AppViewControllersFactory {
     
     func navigationController() -> UINavigationController
 
-    func examples(singleSelectionTableViewData: @escaping () -> Void, multipleSectionsTableViewData: @escaping () -> Void, loadModeTableViewData: @escaping () -> Void, navigateDismiss: @escaping (TableViewControllerExample) -> Void) -> UIViewController
+    func examples(example1: @escaping () -> Void, example2: @escaping () -> Void, example3: @escaping () -> Void, navigateDismiss: @escaping (TableViewControllerExample) -> Void) -> UIViewController
     
 }
 
@@ -21,11 +21,11 @@ final class AppViewControllersFactoryImpl: AppViewControllersFactory {
         UINavigationController()
     }
     
-    func examples(singleSelectionTableViewData: @escaping () -> Void, multipleSectionsTableViewData: @escaping () -> Void, loadModeTableViewData: @escaping () -> Void, navigateDismiss: @escaping (TableViewControllerExample) -> Void) -> UIViewController {
+    func examples(example1: @escaping () -> Void, example2: @escaping () -> Void, example3: @escaping () -> Void, navigateDismiss: @escaping (TableViewControllerExample) -> Void) -> UIViewController {
         let presenter = TableViewPresenterExamples(
-            singleSelectionTableViewData: singleSelectionTableViewData,
-            multipleSectionsTableViewData: multipleSectionsTableViewData,
-            loadModeTableViewData: loadModeTableViewData,
+            example1: example1,
+            example2: example2,
+            example3: example3,
             navigateDismiss: navigateDismiss
         )
         let viewController = TableViewControllerExample(presenter: presenter)

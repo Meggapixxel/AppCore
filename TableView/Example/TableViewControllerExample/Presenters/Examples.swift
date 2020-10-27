@@ -9,19 +9,19 @@ import Foundation
 
 final class TableViewPresenterExamples: TableViewControllerExamplePresenterImpl {
     
-    private let singleSelectionTableViewData: () -> Void
-    private let multipleSectionsTableViewData: () -> Void
-    private let loadModeTableViewData: () -> Void
+    private let example1: () -> Void
+    private let example2: () -> Void
+    private let example3: () -> Void
     
     init(
-        singleSelectionTableViewData: @escaping () -> Void,
-        multipleSectionsTableViewData: @escaping () -> Void,
-        loadModeTableViewData: @escaping () -> Void,
+        example1: @escaping () -> Void,
+        example2: @escaping () -> Void,
+        example3: @escaping () -> Void,
         navigateDismiss: @escaping (TableViewControllerExample) -> Void
     ) {
-        self.singleSelectionTableViewData = singleSelectionTableViewData
-        self.multipleSectionsTableViewData = multipleSectionsTableViewData
-        self.loadModeTableViewData = loadModeTableViewData
+        self.example1 = example1
+        self.example2 = example2
+        self.example3 = example3
         super.init(navigateDismiss: navigateDismiss)
     }
     
@@ -32,9 +32,9 @@ final class TableViewPresenterExamples: TableViewControllerExamplePresenterImpl 
     override func viewDidLoad() {
         tableViewData = TableViewDataImpl(
             cellModels: [
-                TableViewCellPresenterExample.list(text: "SingleSection") { [weak self] in self?.singleSelectionTableViewData() },
-                TableViewCellPresenterExample.list(text: "MultipleSection") { [weak self] in self?.multipleSectionsTableViewData() },
-                TableViewCellPresenterExample.list(text: "LoadMore") { [weak self] in self?.loadModeTableViewData() }
+                TableViewCellPresenterExample.list(text: "SingleSection") { [weak self] in self?.example1() },
+                TableViewCellPresenterExample.list(text: "MultipleSection") { [weak self] in self?.example2() },
+                TableViewCellPresenterExample.list(text: "LoadMore") { [weak self] in self?.example3() }
             ]
         )
     }

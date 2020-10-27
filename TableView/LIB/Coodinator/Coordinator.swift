@@ -29,4 +29,24 @@ extension Coordinator {
         parent?.child = nil
     }
     
+    var rootCoordinator: Coordinator { recursiveRootCoordinator(self) }
+    private func recursiveRootCoordinator(_ coordinator: Coordinator) -> Coordinator {
+        if let parent = coordinator.parent {
+            return recursiveRootCoordinator(parent)
+        } else {
+            return coordinator
+        }
+    }
+    
+}
+
+class BaseCoordinator: Coordinator {
+    
+    final weak var parent: Coordinator?
+    final var child: Coordinator?
+    
+    func start() {
+        fatalError("\(#function) not overrided")
+    }
+    
 }
