@@ -11,6 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private let coordinatorsFactory = CoordinatorsFactoryImpl()
     private let deeplinkNavigator: DeeplinkNavigator = DeeplinkNavigatorImpl(deeplinks: [DeeplinkExample.self])
     private var appCoordinator: Coordinator!
 
@@ -18,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-        appCoordinator = AppCoordinator(window: window, viewControllersFactory: AppViewControllersImpl())
+        appCoordinator = coordinatorsFactory.app(window: window)
         appCoordinator.start()
         
         return true

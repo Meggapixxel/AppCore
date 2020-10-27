@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		73077F3025477F2900A6EEC7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73077F2F25477F2900A6EEC7 /* Coordinator.swift */; };
 		73077F3425477F3700A6EEC7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73077F3325477F3700A6EEC7 /* AppCoordinator.swift */; };
-		73077F3B2547816500A6EEC7 /* AppViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73077F3A2547816500A6EEC7 /* AppViewControllers.swift */; };
+		73077F3B2547816500A6EEC7 /* AppViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73077F3A2547816500A6EEC7 /* AppViewControllersFactory.swift */; };
 		733254FF2544216100ABD1B6 /* UIView+loadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733254FE2544216100ABD1B6 /* UIView+loadingFooterView.swift */; };
 		73325505254432A300ABD1B6 /* TableViewControllerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73325504254432A300ABD1B6 /* TableViewControllerImpl.swift */; };
 		733255092544432800ABD1B6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733255082544432800ABD1B6 /* TableViewController.swift */; };
@@ -17,6 +17,10 @@
 		733255122544449000ABD1B6 /* TableViewControllerPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733255112544449000ABD1B6 /* TableViewControllerPresenterImpl.swift */; };
 		73496D11254786BF00C9ED0D /* DeeplinkNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73496D10254786BF00C9ED0D /* DeeplinkNavigator.swift */; };
 		73496D1C254787C700C9ED0D /* DeeplinkExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73496D1B254787C700C9ED0D /* DeeplinkExample.swift */; };
+		7362B04E2547938100690BDF /* CoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362B04D2547938100690BDF /* CoordinatorsFactory.swift */; };
+		7362B0542547951100690BDF /* ExamplePushCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362B0532547951100690BDF /* ExamplePushCoordinator.swift */; };
+		7362B0572547958800690BDF /* ExamplePushViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362B0562547958800690BDF /* ExamplePushViewControllersFactory.swift */; };
+		7362B05A2547983100690BDF /* TableViewControllerExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362B0592547983100690BDF /* TableViewControllerExamplePresenter.swift */; };
 		7371C87B2544503A00CA2D00 /* TableViewControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371C87A2544503A00CA2D00 /* TableViewControllerExample.swift */; };
 		7371C8812544547000CA2D00 /* Example1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371C8802544547000CA2D00 /* Example1.swift */; };
 		7371C8852544548500CA2D00 /* Example3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7371C8842544548500CA2D00 /* Example3.swift */; };
@@ -51,13 +55,15 @@
 		73B6A65E25434D160003D0C0 /* TableViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A65D25434D160003D0C0 /* TableViewData.swift */; };
 		73B6A6622543501F0003D0C0 /* TableViewLoadingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A6612543501E0003D0C0 /* TableViewLoadingData.swift */; };
 		73B6A6712543524B0003D0C0 /* TableViewSubviewHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A6702543524B0003D0C0 /* TableViewSubviewHeight.swift */; };
+		73E705FD2547A14F0019C9B4 /* ExamplePresentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E705FC2547A14F0019C9B4 /* ExamplePresentCoordinator.swift */; };
+		73E706002547A1800019C9B4 /* ExamplePresentViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E705FF2547A1800019C9B4 /* ExamplePresentViewControllersFactory.swift */; };
 		73FFB73C25478FBA002981D3 /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFB73B25478FBA002981D3 /* Deeplink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		73077F2F25477F2900A6EEC7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		73077F3325477F3700A6EEC7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		73077F3A2547816500A6EEC7 /* AppViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewControllers.swift; sourceTree = "<group>"; };
+		73077F3A2547816500A6EEC7 /* AppViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewControllersFactory.swift; sourceTree = "<group>"; };
 		733254FE2544216100ABD1B6 /* UIView+loadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+loadingFooterView.swift"; sourceTree = "<group>"; };
 		73325504254432A300ABD1B6 /* TableViewControllerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerImpl.swift; sourceTree = "<group>"; };
 		733255082544432800ABD1B6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +71,10 @@
 		733255112544449000ABD1B6 /* TableViewControllerPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerPresenterImpl.swift; sourceTree = "<group>"; };
 		73496D10254786BF00C9ED0D /* DeeplinkNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkNavigator.swift; sourceTree = "<group>"; };
 		73496D1B254787C700C9ED0D /* DeeplinkExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkExample.swift; sourceTree = "<group>"; };
+		7362B04D2547938100690BDF /* CoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsFactory.swift; sourceTree = "<group>"; };
+		7362B0532547951100690BDF /* ExamplePushCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePushCoordinator.swift; sourceTree = "<group>"; };
+		7362B0562547958800690BDF /* ExamplePushViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePushViewControllersFactory.swift; sourceTree = "<group>"; };
+		7362B0592547983100690BDF /* TableViewControllerExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerExamplePresenter.swift; sourceTree = "<group>"; };
 		7371C87A2544503A00CA2D00 /* TableViewControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerExample.swift; sourceTree = "<group>"; };
 		7371C8802544547000CA2D00 /* Example1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1.swift; sourceTree = "<group>"; };
 		7371C8842544548500CA2D00 /* Example3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example3.swift; sourceTree = "<group>"; };
@@ -101,6 +111,8 @@
 		73B6A65D25434D160003D0C0 /* TableViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewData.swift; sourceTree = "<group>"; };
 		73B6A6612543501E0003D0C0 /* TableViewLoadingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewLoadingData.swift; sourceTree = "<group>"; };
 		73B6A6702543524B0003D0C0 /* TableViewSubviewHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSubviewHeight.swift; sourceTree = "<group>"; };
+		73E705FC2547A14F0019C9B4 /* ExamplePresentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePresentCoordinator.swift; sourceTree = "<group>"; };
+		73E705FF2547A1800019C9B4 /* ExamplePresentViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePresentViewControllersFactory.swift; sourceTree = "<group>"; };
 		73FFB73B25478FBA002981D3 /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,14 +222,42 @@
 			path = Implemenation;
 			sourceTree = "<group>";
 		};
+		7362B04B2547936000690BDF /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				7362B04D2547938100690BDF /* CoordinatorsFactory.swift */,
+				7362B04C2547937000690BDF /* App */,
+				7362B052254794EC00690BDF /* ExamplePush */,
+				73E705FB2547A1340019C9B4 /* ExamplePresent */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		7362B04C2547937000690BDF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				73077F3325477F3700A6EEC7 /* AppCoordinator.swift */,
+				73077F3A2547816500A6EEC7 /* AppViewControllersFactory.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7362B052254794EC00690BDF /* ExamplePush */ = {
+			isa = PBXGroup;
+			children = (
+				7362B0532547951100690BDF /* ExamplePushCoordinator.swift */,
+				7362B0562547958800690BDF /* ExamplePushViewControllersFactory.swift */,
+			);
+			path = ExamplePush;
+			sourceTree = "<group>";
+		};
 		7371C87E2544543A00CA2D00 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				73077F3E2547839E00A6EEC7 /* ETC */,
-				73496D13254786CA00C9ED0D /* Deeplink */,
 				73B6A619254347770003D0C0 /* AppDelegate.swift */,
-				73077F3325477F3700A6EEC7 /* AppCoordinator.swift */,
-				73077F3A2547816500A6EEC7 /* AppViewControllers.swift */,
+				73496D13254786CA00C9ED0D /* Deeplink */,
+				7362B04B2547936000690BDF /* Coordinators */,
 				73077F382547801A00A6EEC7 /* TableViewControllerExample */,
 			);
 			path = Example;
@@ -226,6 +266,7 @@
 		7371C87F2544545D00CA2D00 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				7362B0592547983100690BDF /* TableViewControllerExamplePresenter.swift */,
 				7371C89A2544593B00CA2D00 /* Examples.swift */,
 				7371C8802544547000CA2D00 /* Example1.swift */,
 				7390661525461B1600D3D168 /* Example2.swift */,
@@ -368,6 +409,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		73E705FB2547A1340019C9B4 /* ExamplePresent */ = {
+			isa = PBXGroup;
+			children = (
+				73E705FC2547A14F0019C9B4 /* ExamplePresentCoordinator.swift */,
+				73E705FF2547A1800019C9B4 /* ExamplePresentViewControllersFactory.swift */,
+			);
+			path = ExamplePresent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -444,6 +494,7 @@
 				733255122544449000ABD1B6 /* TableViewControllerPresenterImpl.swift in Sources */,
 				7390661125461A1000D3D168 /* HeaderFooterViewExampleModel.swift in Sources */,
 				739065FE254616A100D3D168 /* TableViewLoadMoreData.swift in Sources */,
+				7362B05A2547983100690BDF /* TableViewControllerExamplePresenter.swift in Sources */,
 				73B6A6622543501F0003D0C0 /* TableViewLoadingData.swift in Sources */,
 				73B6A64D25434AE70003D0C0 /* TableViewCellClass.swift in Sources */,
 				73B6A65425434B190003D0C0 /* TableViewCellModel.swift in Sources */,
@@ -465,18 +516,23 @@
 				73B6A636254348AE0003D0C0 /* TableViewCell.swift in Sources */,
 				73B6A6712543524B0003D0C0 /* TableViewSubviewHeight.swift in Sources */,
 				73325505254432A300ABD1B6 /* TableViewControllerImpl.swift in Sources */,
+				7362B04E2547938100690BDF /* CoordinatorsFactory.swift in Sources */,
 				73B6A63D25434A650003D0C0 /* TableViewHeaderFooterViewClass.swift in Sources */,
 				73B6A633254347C50003D0C0 /* TableViewSectionModel.swift in Sources */,
 				73B6A64125434A790003D0C0 /* TableViewHeaderFooterViewModel.swift in Sources */,
-				73077F3B2547816500A6EEC7 /* AppViewControllers.swift in Sources */,
+				73077F3B2547816500A6EEC7 /* AppViewControllersFactory.swift in Sources */,
 				73B6A65E25434D160003D0C0 /* TableViewData.swift in Sources */,
 				737A2BC32544C76600A78129 /* TableViewDataImpl.swift in Sources */,
 				7390660E254619E800D3D168 /* HeaderFooterViewExample.swift in Sources */,
+				73E705FD2547A14F0019C9B4 /* ExamplePresentCoordinator.swift in Sources */,
+				7362B0542547951100690BDF /* ExamplePushCoordinator.swift in Sources */,
 				7371C8812544547000CA2D00 /* Example1.swift in Sources */,
 				737A2BD82544D40C00A78129 /* ViewControllerImpl.swift in Sources */,
+				7362B0572547958800690BDF /* ExamplePushViewControllersFactory.swift in Sources */,
 				733254FF2544216100ABD1B6 /* UIView+loadingFooterView.swift in Sources */,
 				7371C87B2544503A00CA2D00 /* TableViewControllerExample.swift in Sources */,
 				73077F3425477F3700A6EEC7 /* AppCoordinator.swift in Sources */,
+				73E706002547A1800019C9B4 /* ExamplePresentViewControllersFactory.swift in Sources */,
 				73B6A65725434B3E0003D0C0 /* TableViewCell+UITableView.swift in Sources */,
 				733255092544432800ABD1B6 /* TableViewController.swift in Sources */,
 				739066062546187A00D3D168 /* TableViewLoadMoreDataImpl.swift in Sources */,

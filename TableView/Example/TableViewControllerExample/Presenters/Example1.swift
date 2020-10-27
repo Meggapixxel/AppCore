@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TableViewPresenterExample1: TableViewControllerPresenterImpl<TableViewControllerExample> {
+final class TableViewPresenterExample1: TableViewControllerExamplePresenterImpl {
     
     override func viewDidLoad() {
         fetchData()

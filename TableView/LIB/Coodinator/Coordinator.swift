@@ -7,6 +7,26 @@
 
 import Foundation
 
-protocol Coordinator {
+protocol Coordinator: class {
+    
+    var parent: Coordinator? { get set }
+    var child: Coordinator? { get set }
+    
     func start()
+    
+}
+
+extension Coordinator {
+    
+    func present(coordinator: Coordinator) {
+        child = coordinator
+        coordinator.parent = self
+        coordinator.start()
+    }
+    
+    func dismiss() {
+        child?.dismiss()
+        parent?.child = nil
+    }
+    
 }

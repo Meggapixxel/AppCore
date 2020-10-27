@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TableViewPresenterExamples: TableViewControllerPresenterImpl<TableViewControllerExample> {
+final class TableViewPresenterExamples: TableViewControllerExamplePresenterImpl {
     
     private let singleSelectionTableViewData: () -> Void
     private let multipleSectionsTableViewData: () -> Void
@@ -16,11 +16,17 @@ final class TableViewPresenterExamples: TableViewControllerPresenterImpl<TableVi
     init(
         singleSelectionTableViewData: @escaping () -> Void,
         multipleSectionsTableViewData: @escaping () -> Void,
-        loadModeTableViewData: @escaping () -> Void
+        loadModeTableViewData: @escaping () -> Void,
+        navigateDismiss: @escaping (TableViewControllerExample) -> Void
     ) {
         self.singleSelectionTableViewData = singleSelectionTableViewData
         self.multipleSectionsTableViewData = multipleSectionsTableViewData
         self.loadModeTableViewData = loadModeTableViewData
+        super.init(navigateDismiss: navigateDismiss)
+    }
+    
+    required init(navigateDismiss: @escaping (TableViewControllerExample) -> Void) {
+        fatalError("init(navigateDismiss:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -28,7 +34,7 @@ final class TableViewPresenterExamples: TableViewControllerPresenterImpl<TableVi
             cellModels: [
                 TableViewCellPresenterExample.list(text: "SingleSection") { [weak self] in self?.singleSelectionTableViewData() },
                 TableViewCellPresenterExample.list(text: "MultipleSection") { [weak self] in self?.multipleSectionsTableViewData() },
-                TableViewCellPresenterExample.list(text: "LoadMore") { [weak self] in self?.loadModeTableViewData() },
+                TableViewCellPresenterExample.list(text: "LoadMore") { [weak self] in self?.loadModeTableViewData() }
             ]
         )
     }

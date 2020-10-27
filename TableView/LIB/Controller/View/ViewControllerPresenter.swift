@@ -11,6 +11,8 @@ protocol ViewControllerPresenter: class {
     
     func viewDidLoad()
     
+    func dismiss()
+    
 }
 
 extension ViewControllerPresenter {
