@@ -41,6 +41,7 @@ final class AppCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
+    
 }
 
 private extension AppCoordinator {

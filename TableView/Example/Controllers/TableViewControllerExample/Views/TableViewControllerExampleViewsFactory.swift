@@ -5,13 +5,12 @@
 //  Created by Vadym Zhydenko on 28.10.2020.
 //
 
-import Foundation
 import AppCore
 
 struct TableViewControllerExampleViewsFactory {
     
     static func cellList(text: String, selection: @escaping () -> Void) -> TableViewCellModel {
-        TableViewCellPresenterExample(
+        TableViewCellExampleModel(
             color: .white,
             text: text,
             textAlignment: .center,
@@ -20,7 +19,7 @@ struct TableViewControllerExampleViewsFactory {
     }
     
     static func cellDetails(text: String = .random(maxLength: 200)) -> TableViewCellModel {
-        TableViewCellPresenterExample(
+        TableViewCellExampleModel(
             color: .random(),
             text: text,
             textAlignment: .left,

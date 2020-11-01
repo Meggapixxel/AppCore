@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		73077F3425477F3700A6EEC7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73077F3325477F3700A6EEC7 /* AppCoordinator.swift */; };
 		73077F3B2547816500A6EEC7 /* AppViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73077F3A2547816500A6EEC7 /* AppViewControllersFactory.swift */; };
+		7336F164254F29B3004DABD9 /* TableViewCellExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7336F163254F29B3004DABD9 /* TableViewCellExampleModel.swift */; };
 		7362B04E2547938100690BDF /* CoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362B04D2547938100690BDF /* CoordinatorsFactory.swift */; };
 		7362B0542547951100690BDF /* ExamplePushCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362B0532547951100690BDF /* ExamplePushCoordinator.swift */; };
 		7362B0572547958800690BDF /* ExamplePushViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362B0562547958800690BDF /* ExamplePushViewControllersFactory.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		73077F3325477F3700A6EEC7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		73077F3A2547816500A6EEC7 /* AppViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewControllersFactory.swift; sourceTree = "<group>"; };
+		7336F163254F29B3004DABD9 /* TableViewCellExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellExampleModel.swift; sourceTree = "<group>"; };
 		7362B04D2547938100690BDF /* CoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsFactory.swift; sourceTree = "<group>"; };
 		7362B0532547951100690BDF /* ExamplePushCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePushCoordinator.swift; sourceTree = "<group>"; };
 		7362B0562547958800690BDF /* ExamplePushViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePushViewControllersFactory.swift; sourceTree = "<group>"; };
@@ -96,7 +98,7 @@
 			path = TableViewControllerExample;
 			sourceTree = "<group>";
 		};
-		73077F3E2547839E00A6EEC7 /* ETC */ = {
+		73077F3E2547839E00A6EEC7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				73B6A6222543477A0003D0C0 /* Assets.xcassets */,
@@ -104,7 +106,7 @@
 				73B6A6272543477A0003D0C0 /* Info.plist */,
 				7371C8972544588400CA2D00 /* Utils.swift */,
 			);
-			path = ETC;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7362B04B2547936000690BDF /* Coordinators */ = {
@@ -140,7 +142,7 @@
 		7371C87E2544543A00CA2D00 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				73077F3E2547839E00A6EEC7 /* ETC */,
+				73077F3E2547839E00A6EEC7 /* Resources */,
 				73D2779F2548D0FA0039E312 /* Deeplink */,
 				73B6A619254347770003D0C0 /* AppDelegate.swift */,
 				7362B04B2547936000690BDF /* Coordinators */,
@@ -224,6 +226,7 @@
 			children = (
 				7371C892254454EE00CA2D00 /* TableViewCellExample.xib */,
 				7371C891254454EE00CA2D00 /* TableViewCellExample.swift */,
+				7336F163254F29B3004DABD9 /* TableViewCellExampleModel.swift */,
 			);
 			path = TableViewCellExample;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				7371C8982544588400CA2D00 /* Utils.swift in Sources */,
 				73B6A61A254347770003D0C0 /* AppDelegate.swift in Sources */,
 				7371C89B2544593B00CA2D00 /* Examples.swift in Sources */,
+				7336F164254F29B3004DABD9 /* TableViewCellExampleModel.swift in Sources */,
 				7362B04E2547938100690BDF /* CoordinatorsFactory.swift in Sources */,
 				73D277B52548DADA0039E312 /* TableViewControllerExampleViewsFactory.swift in Sources */,
 				73077F3B2547816500A6EEC7 /* AppViewControllersFactory.swift in Sources */,
@@ -471,7 +475,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P48UR2NBG2;
-				INFOPLIST_FILE = TableView/Example/ETC/Info.plist;
+				INFOPLIST_FILE = TableView/Example/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P48UR2NBG2;
-				INFOPLIST_FILE = TableView/Example/ETC/Info.plist;
+				INFOPLIST_FILE = TableView/Example/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
